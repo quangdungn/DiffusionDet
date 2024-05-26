@@ -8,8 +8,8 @@ MODEL:
     NUM_PROPOSALS: 500
     NUM_CLASSES: 80
 DATASETS:
-  TRAIN: ("caries/train",)
-  TEST:  ("caries/val",)
+  TRAIN: ("caries_train",)
+  TEST:  ("caries_val",)
 SOLVER:
   STEPS: (350, 420) # 350000, 420000 => 350, 420
   MAX_ITER: 450 # 450000=> 450
