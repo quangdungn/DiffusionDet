@@ -10,7 +10,17 @@ DiffusionDet Training Script.
 
 This script is a simplified version of the training script in detectron2/tools.
 """
+#=================================================================
+#register dataset
+from detectron2.data.datasets import register_coco_instances
 
+# Đăng ký bộ dữ liệu huấn luyện
+register_coco_instances("caries_train", {}, "/kaggle/working/DiffusionDet/datasets/caries/annotations/train_coco_annotations.json", "/kaggle/working/DiffusionDet/datasets/caries/train")
+
+# Đăng ký bộ dữ liệu kiểm tra
+register_coco_instances("caries_val", {}, "/kaggle/working/DiffusionDet/datasets/caries/annotations/val_coco_annotations.json", "/kaggle/working/DiffusionDet/datasets/caries/val")
+
+#=================================================================
 import os
 import itertools
 import weakref
